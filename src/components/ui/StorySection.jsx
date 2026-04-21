@@ -24,7 +24,7 @@ function StorySection() {
           <div className="md:col-span-2 md:row-span-2 bg-[#1a1a1f] relative group overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/60 to-transparent z-10" />
             <img 
-              src="/images/download1.jpg" 
+              src="/images/download (1).png" 
               alt="Spider-Man tactical"
               className="absolute inset-0 w-full h-full object-cover opacity-45 group-hover:opacity-60 transition-opacity duration-500 mix-blend-luminosity"
             />
