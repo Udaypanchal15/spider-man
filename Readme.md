@@ -2,8 +2,6 @@
 
 An immersive 3D Spider-Man website built with React, Three.js, and GSAP.
 
-![Spider-Man](https://img.shields.io/badge/Spider-Man-Eperience-red)
-
 ## Features
 
 - 🎬 Full-screen cinematic video background
@@ -19,24 +17,24 @@ An immersive 3D Spider-Man website built with React, Three.js, and GSAP.
 
 Type these codes on your keyboard:
 
-| Code | Name | Message |
-|------|------|--------|
-| `fu` | UNCLENCH FISTS | WITH GREAT POWER COMES GREAT RESPONSIBILITY |
-| `web` | WEB WING | SOAR THROUGH THE SKY |
-| `spider` | SPIDEY SENSE | ⚡ SPIDER SENSE TINGLING ⚡ |
-| `mj` | MARY JANE | MISSING: MARY JANE WATSON |
-| `gw` | GWEN STACY | I WILL SAVE GWEN. I WILL SAVE HER. |
-| `os` | OSCORP | OSBORN INDUSTRIES - EMPLOYEE PORTAL |
-| `tony` | TONY STARK | PROTECT GEORGE STACY. HE IS THE KEY. |
-| `ben` | BEN PARKER | WITH GREAT POWER... |
-| `goblin` | GREEN GOBLIN | RISE, MY SON. RISE! |
-| `oct` | DOC OCK | THE POWER OF THE SUN IN THE PALM OF MY HAND |
-| `vulture` | VULTURE | I AM NOT WHAT I AM |
-| `rhino` | RHINO | LIKE A BULL! |
-| `electro` | ELECTRO | I AM THE TRUE SPIDER! |
-| `sand` | SANDMAN | I AM SANDMAN? |
-| `lizard` | THE LIZARD | THE LIZARD PREVAILS! |
-| `mysterio` | MYSTERIO | TRUST NO ONE |
+| Code       | Name           | Message                                     |
+| ---------- | -------------- | ------------------------------------------- |
+| `fu`       | UNCLENCH FISTS | WITH GREAT POWER COMES GREAT RESPONSIBILITY |
+| `web`      | WEB WING       | SOAR THROUGH THE SKY                        |
+| `spider`   | SPIDEY SENSE   | ⚡ SPIDER SENSE TINGLING ⚡                 |
+| `mj`       | MARY JANE      | MISSING: MARY JANE WATSON                   |
+| `gw`       | GWEN STACY     | I WILL SAVE GWEN. I WILL SAVE HER.          |
+| `os`       | OSCORP         | OSBORN INDUSTRIES - EMPLOYEE PORTAL         |
+| `tony`     | TONY STARK     | PROTECT GEORGE STACY. HE IS THE KEY.        |
+| `ben`      | BEN PARKER     | WITH GREAT POWER...                         |
+| `goblin`   | GREEN GOBLIN   | RISE, MY SON. RISE!                         |
+| `oct`      | DOC OCK        | THE POWER OF THE SUN IN THE PALM OF MY HAND |
+| `vulture`  | VULTURE        | I AM NOT WHAT I AM                          |
+| `rhino`    | RHINO          | LIKE A BULL!                                |
+| `electro`  | ELECTRO        | I AM THE TRUE SPIDER!                       |
+| `sand`     | SANDMAN        | I AM SANDMAN?                               |
+| `lizard`   | THE LIZARD     | THE LIZARD PREVAILS!                        |
+| `mysterio` | MYSTERIO       | TRUST NO ONE                                |
 
 Special: Type `sss` quickly for SPIDER SENSE mode!
 
@@ -85,10 +83,6 @@ spider-man/
 ├── tailwind.config.js
 └── vite.config.js
 ```
-
-## License
-
-MIT License
 
 ---
 
