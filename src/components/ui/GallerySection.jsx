@@ -35,7 +35,7 @@ function GallerySection() {
             <div className="h-1 w-24 bg-primary-container mt-4" />
           </div>
           <a
-            className="hidden md:flex items-center gap-2 text-secondary font-headline text-sm font-bold tracking-wider hover:text-white transition-colors"
+            className="hidden md:flex items-center gap-2 text-secondary font-headline text-sm font-bold tracking-wider hover:text-white transition-colors cursor-pointer"
             href="#"
           >
             ACCESS DATABASE
