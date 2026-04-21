@@ -8,10 +8,22 @@ function WebCursor() {
   const lastPosRef = useRef({ x: 0, y: 0 })
   const frameRef = useRef(0)
   const isHoveringRef = useRef(false)
+  const isTouchDeviceRef = useRef(false)
   const linesRef = useRef([])
   const webLinesRef = useRef([])
 
   useEffect(() => {
+    const isTouchDevice = ('ontouchstart' in window) || 
+      (navigator.maxTouchPoints > 0) || 
+      (navigator.msMaxTouchPoints > 0)
+    const isSmallScreen = window.innerWidth < 768
+    
+    if (isSmallScreen) {
+      return null
+    }
+    
+    isTouchDeviceRef.current = isTouchDevice
+
     const cursor = document.createElement('div')
     cursor.id = 'spider-cursor'
     cursor.innerHTML = `
@@ -68,14 +80,11 @@ function WebCursor() {
       const svg = cursor.querySelector('svg')
       if (svg) {
         const mainColor = isHovering ? '#E62429' : '#A4C8FF'
-        const accentColor = isHovering ? '#ffffff' : '#E62429'
         svg.querySelectorAll('circle').forEach(c => {
           if (c.getAttribute('r') === '3') c.setAttribute('fill', mainColor)
         })
       }
     }
-
-    const lerp = (start, end, factor) => start + (end - start) * factor
 
     const drawWebLine = (startX, startY, endX, endY) => {
       const line = document.createElement('div')
@@ -213,7 +222,7 @@ function WebCursor() {
       if (isInteractive) {
         isHoveringRef.current = true
         updateCursorStyle(true, false)
-document.documentElement.style.cursor = 'none'
+        document.documentElement.style.cursor = 'none'
       }
     }
 
@@ -249,6 +258,31 @@ document.documentElement.style.cursor = 'none'
       createClickWeb(e.clientX, e.clientY)
     }
 
+    const handleTouchStart = (e) => {
+      const touch = e.touches[0]
+      if (touch) {
+        targetRef.current.x = touch.clientX
+        targetRef.current.y = touch.clientY
+        positionRef.current.x = touch.clientX
+        positionRef.current.y = touch.clientY
+        cursor.style.left = `${touch.clientX}px`
+        cursor.style.top = `${touch.clientY}px`
+        cursor.style.opacity = '1'
+      }
+    }
+
+    const handleTouchMove = (e) => {
+      const touch = e.touches[0]
+      if (touch) {
+        targetRef.current.x = touch.clientX
+        targetRef.current.y = touch.clientY
+      }
+    }
+
+    const handleTouchEnd = () => {
+      cursor.style.opacity = '0'
+    }
+
     document.body.style.cursor = 'none'
     window.addEventListener('mousemove', handleMouseMove)
     window.addEventListener('mouseover', handleMouseOver)
@@ -256,6 +290,13 @@ document.documentElement.style.cursor = 'none'
     window.addEventListener('mousedown', handleMouseDown)
     window.addEventListener('mouseup', handleMouseUp)
     window.addEventListener('click', handleClick)
+
+    if (isTouchDevice) {
+      window.addEventListener('touchstart', handleTouchStart, { passive: true })
+      window.addEventListener('touchmove', handleTouchMove, { passive: true })
+      window.addEventListener('touchend', handleTouchEnd)
+      cursor.style.opacity = '0'
+    }
 
     animate()
 
@@ -266,6 +307,11 @@ document.documentElement.style.cursor = 'none'
       window.removeEventListener('mousedown', handleMouseDown)
       window.removeEventListener('mouseup', handleMouseUp)
       window.removeEventListener('click', handleClick)
+      if (isTouchDevice) {
+        window.removeEventListener('touchstart', handleTouchStart)
+        window.removeEventListener('touchmove', handleTouchMove)
+        window.removeEventListener('touchend', handleTouchEnd)
+      }
       cursor.remove()
       linesRef.current.forEach(l => l.remove())
       webLinesRef.current.forEach(w => w.remove())
