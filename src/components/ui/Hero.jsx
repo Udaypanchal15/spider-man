@@ -38,7 +38,7 @@ function Hero() {
         className="absolute inset-0 w-full h-full object-cover"
         style={{ opacity: 0.3 }}
       >
-        <source src="/hero-cinematic.mp4" type="video/mp4" />
+        <source src="./hero-cinematic.mp4" type="video/mp4" />
       </video>
 
       <div className="absolute inset-0 bg-gradient-to-b from-[#060c1a]/50 via-[#060c1a]/30 to-[#060c1a]/70 pointer-events-none z-10" />

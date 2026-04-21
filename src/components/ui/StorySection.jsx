@@ -24,7 +24,7 @@ function StorySection() {
           <div className="md:col-span-2 md:row-span-2 bg-[#1a1a1f] relative group overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-[#0a0a0f]/60 to-transparent z-10" />
             <img 
-              src="/images/download (1).png" 
+              src="./images/download (1).png" 
               alt="Spider-Man tactical"
               className="absolute inset-0 w-full h-full object-cover opacity-45 group-hover:opacity-60 transition-opacity duration-500 mix-blend-luminosity"
             />
@@ -43,7 +43,7 @@ function StorySection() {
 
           <div className="bg-[#1c1c20] p-8 flex flex-col justify-between group hover:bg-[#252530] transition-colors border-l-2 border-[#A4C8FF] relative overflow-hidden">
             <img 
-              src="/images/spider-man-suitupgrade.png" 
+              src="./images/spider-man-suitupgrade.png" 
               alt="Suit Upgrade"
               className="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity duration-500"
             />
@@ -58,7 +58,7 @@ function StorySection() {
 
           <div className="bg-[#1c1c20] p-8 flex flex-col justify-between group hover:bg-[#252530] transition-colors border-l-2 border-[#E62429] relative overflow-hidden">
             <img 
-              src="/images/spider-threat.jpg" 
+              src="./images/spider-threat.jpg" 
               alt="Threat Detection"
               className="absolute inset-0 w-full h-full object-cover opacity-30 group-hover:opacity-40 transition-opacity duration-500"
             />

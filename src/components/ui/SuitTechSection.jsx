@@ -51,7 +51,7 @@ function SuitTechSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           <div className="relative min-h-[500px] bg-surface-container-lowest border border-outline-variant/15 flex items-center justify-center overflow-hidden">
             <img 
-              src="/images/spider-man-suitupgrade.png" 
+              src="./images/spider-man-suitupgrade.png" 
               alt="Spider-Man Suit Upgrade Schematic"
               className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-screen"
             />

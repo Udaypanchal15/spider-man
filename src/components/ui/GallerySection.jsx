@@ -5,22 +5,22 @@ function GallerySection() {
     {
       title: 'KINETIC STRIKE',
       subtitle: 'Combat Analysis',
-      image: '/images/7cd9ade534d37e70a74fbc195a71b3bd.jpg',
+      image: './images/7cd9ade534d37e70a74fbc195a71b3bd.jpg',
     },
     {
       title: 'TACTICAL VIEW',
       subtitle: 'Suit Schematic',
-      image: '/images/747046aabfae88ab84371a9275064b64.jpg',
+      image: './images/747046aabfae88ab84371a9275064b64.jpg',
     },
     {
       title: 'URBAN RECON',
       subtitle: 'Night Patrol',
-      image: '/images/97493c783194ee8b05b9e19714186a10.jpg',
+      image: './images/97493c783194ee8b05b9e19714186a10.jpg',
     },
     {
       title: 'SYSTEMS ONLINE',
       subtitle: 'Protocol Active',
-      image: '/images/e4b40c91f92708cda28426c573818b50.jpg',
+      image: './images/e4b40c91f92708cda28426c573818b50.jpg',
     },
   ]
 
