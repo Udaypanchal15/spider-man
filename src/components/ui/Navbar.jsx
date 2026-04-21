@@ -39,7 +39,7 @@ function Navbar() {
               <a
                 key={link.label}
                 href={link.href}
-                className="font-headline uppercase tracking-tighter font-bold text-sm text-secondary hover:text-primary-container hover:-translate-y-1 transition-all duration-200 cursor-default"
+                className="font-headline uppercase tracking-tighter font-bold text-sm text-secondary hover:text-primary-container hover:-translate-y-1 transition-all duration-200"
               >
                 {link.label}
               </a>

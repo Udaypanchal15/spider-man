@@ -213,7 +213,7 @@ function WebCursor() {
       if (isInteractive) {
         isHoveringRef.current = true
         updateCursorStyle(true, false)
-        document.body.style.cursor = 'none'
+document.documentElement.style.cursor = 'none'
       }
     }
 
